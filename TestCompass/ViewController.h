@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
+{
+CLLocationManager *locationManager;
+IBOutlet UIImageView *compassImage;
+}
+@property (nonatomic,retain) CLLocationManager *locationManager;
 
 @end
